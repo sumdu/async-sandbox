@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace SingleInstanceApp
 {
@@ -7,6 +7,7 @@ namespace SingleInstanceApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
         }
     }
 }
