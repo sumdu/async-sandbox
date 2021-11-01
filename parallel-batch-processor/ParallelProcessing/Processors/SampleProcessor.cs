@@ -13,10 +13,10 @@ namespace ParallelProcessing.Processors
 
         public bool Process(int id)
         {
-            lock (Lock)
-            {
-                Console.WriteLine($"Processing item {id}");
-            }
+            //lock (Lock)
+            //{
+            //    Console.WriteLine($"Processing item {id}");
+            //}
 
             Thread.Sleep(1000);
             return true;

@@ -17,7 +17,7 @@ namespace ParallelProcessing
         public void Demo()
         {
             int threadCount = 2;
-            var ids = Enumerable.Range(1, 80).ToList();
+            var ids = Enumerable.Range(1, 140).ToList();
             var processor = new SampleProcessor();
             var progressFileName = "c:\\temp\\test-123\\processed.txt";
 
@@ -36,9 +36,8 @@ namespace ParallelProcessing
             var totalProcessedCount = ids.Count - idsToProcess.Count();
 
             // output progress to console
-            var events = new ConsoleEventNotifier<T>(); 
-            (events as IEventHandler<T>).OnItemSuccess = (id) => progressStorage.MarkAsProcessed(id);
-            (events as IEventHandler<T>).OnItemError = (id, ex) => { Console.WriteLine($"Error processing {id}: {ex}"); };
+            var events = new ConsoleEventNotifier<T>();
+            events.OnItemSuccess += (id) => progressStorage.MarkAsProcessed(id);
 
             var t = new Task(() =>
             {

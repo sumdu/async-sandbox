@@ -10,14 +10,14 @@ namespace ParallelProcessing.Runner
 {
     public class MultithreadRunner
     {
-        public static void Run<TId>(int totalProcessedIdCount, IEnumerable<TId> ids, Func<TId, bool> processor, int threadCount, IEventHandler<TId> eventHandler, 
+        public static void Run<TId>(int totalProcessedIdCount, IEnumerable<TId> ids, Func<TId, bool> processor, int threadCount, ProcessingEvents<TId> events, 
             CancellationToken cancellationToken)
         {
             var workSplitter = new WorkSplitter();
-            var tasks = workSplitter.CreateTasks(totalProcessedIdCount, cancellationToken, processor, ids, threadCount, eventHandler);
+            var tasks = workSplitter.CreateTasks(totalProcessedIdCount, cancellationToken, processor, ids, threadCount, events);
             tasks.ForEach(t => t.Start());
             Task.WaitAll(tasks.ToArray());
-            eventHandler.OnAllThreadsCompleted();
+            events.OnAllThreadsCompleted();
         }
     }
 }

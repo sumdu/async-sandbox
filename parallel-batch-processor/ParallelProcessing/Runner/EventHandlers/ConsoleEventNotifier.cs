@@ -7,34 +7,56 @@ using System.Threading.Tasks;
 
 namespace ParallelProcessing.Runner.EventHandlers
 {
-    public class ConsoleEventNotifier<T> : IEventHandler<T>
+
+
+    public class ConsoleEventNotifier<T> : ProcessingEvents<T>
     {
-        OnItemSuccessDelegate<T> IEventHandler<T>.OnItemSuccess { get; set; }
-        OnItemErrorDelegate<T> IEventHandler<T>.OnItemError { get; set; }
-        
-        public void OnItemCompelted(double percentComplete)
+        public ConsoleEventNotifier()
+        {
+            this.OnItemSuccess += ItemSuccess;
+            this.OnItemError += ItemError;
+            this.OnItemCompelted += ItemCompelted;
+
+            this.OnThreadStarted += ThreadStarted;
+            this.OnThreadCompleted += ThreadCompleted;
+            this.OnThreadCancelled += ThreadCancelled;
+
+            this.OnAllThreadsCompleted += AllThreadsCompleted;
+        }
+
+        public void ItemSuccess(T id)
+        {
+            // no need to polute console with messages
+        }
+
+        public void ItemError(T id, Exception ex)
+        {
+            Console.WriteLine($"Error processing {id}: {ex}");
+        }
+
+        public void ItemCompelted(double percentComplete)
         {
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} is {percentComplete:0.##} % complete");
         }
 
-        public void OnAllThreadsCompleted()
-        {
-            Console.WriteLine("All threads are cancelled or completed");
-        }
-
-        public void OnThreadStarted()
+        public void ThreadStarted()
         {
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} started");
         }
 
-        public void OnThreadCompleted()
+        public void ThreadCompleted()
         {
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} finished");
         }
 
-        public void OnThreadCancelled()
+        public void ThreadCancelled()
         {
             Console.WriteLine($"Thread {Thread.CurrentThread.ManagedThreadId} is stopping");
+        }
+
+        public void AllThreadsCompleted()
+        {
+            Console.WriteLine("All threads are cancelled or completed");
         }
     }
 }

@@ -75,7 +75,7 @@
     <Compile Include="ConsoleExecutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runner\EventHandlers\ConsoleEventNotifier.cs" />
-    <Compile Include="Runner\EventHandlers\IEventHandler.cs" />
+    <Compile Include="Runner\EventHandlers\ProcessingEvents.cs" />
     <Compile Include="Runner\ProgressStorage\IItemSource.cs" />
     <Compile Include="Runner\MultithreadRunner.cs" />
     <Compile Include="Runner\ProgressStorage\ProgressFileStorage.cs" />
