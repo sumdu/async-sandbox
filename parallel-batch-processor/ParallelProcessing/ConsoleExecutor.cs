@@ -14,21 +14,8 @@ namespace ParallelBatchProcessor
 {
     public class ConsoleExecutor
     {
-        public void Demo()
-        {
-            int threadCount = 2;
-            var ids = Enumerable.Range(1, 140).ToList();
-            var processor = new SampleProcessor();
-            var progressFileName = "c:\\temp\\test-123\\processed.txt";
-
-            var consoleExecutor = new ConsoleExecutor();
-            consoleExecutor.Process(threadCount, ids, processor, progressFileName);
-        }
-
         public void Process<T>(int threadCount, IList<T> ids, IProcessor<T> processor, string processedFileName)
         {
-            // run in batch, save progress to file
-
             var cancellationSource = new CancellationTokenSource();
 
             var progressStorage = new ProgressFileStorage<T>(processedFileName, ids);
@@ -46,7 +33,6 @@ namespace ParallelBatchProcessor
             t.Start();
 
             // we need to keep main thread alive
-
             Console.WriteLine("Hit <Enter> to stop...");
             Console.ReadLine();
 

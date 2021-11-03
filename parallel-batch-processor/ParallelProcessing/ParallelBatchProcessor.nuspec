@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
-    <version>$version$</version>
+    <version>1.0.1</version>
     <title>$title$</title>
-	<description>Allows to split array in to batches and processes each batch in parallel</description>
+	<description>Allows to split array into batches and processes each batch in parallel</description>
+	<readme>docs\readme.md</readme>
     <authors>Andrew O.</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <releaseNotes>First version of this package</releaseNotes>
     <copyright>$copyright$</copyright>
-    <tags>Tag1 Tag2</tags>
+	<dependencies>
+      <group targetFramework=".NETFramework4.8" />
+	</dependencies>
   </metadata>
+  <files>
+    <file src="readme.md" target="docs\" />
+  </files>
 </package>
