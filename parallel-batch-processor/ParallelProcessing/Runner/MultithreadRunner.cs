@@ -1,4 +1,4 @@
-﻿using ParallelProcessing.Runner.EventHandlers;
+﻿using ParallelBatchProcessor.Runner.EventHandlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Runner
+namespace ParallelBatchProcessor.Runner
 {
     public class MultithreadRunner
     {

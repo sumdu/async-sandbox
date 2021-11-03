@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Extentions
+namespace ParallelBatchProcessor.Extentions
 {
     public static class CollectionExtensions
     {

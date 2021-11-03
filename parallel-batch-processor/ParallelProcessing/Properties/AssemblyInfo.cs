@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ParallelProcessing")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ParallelBatchProcessor")]
+[assembly: AssemblyDescription("Provides a way of breaking down list of objects into batches and processing each batch on a separate thread")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ParallelProcessing")]

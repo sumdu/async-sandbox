@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Runner.ProgressStorage
+namespace ParallelBatchProcessor.Runner.ProgressStorage
 {
     /// <summary>
     /// This class doesn't store progress. 

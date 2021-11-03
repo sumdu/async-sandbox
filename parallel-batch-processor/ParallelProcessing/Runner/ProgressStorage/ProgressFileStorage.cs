@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 
-namespace ParallelProcessing.Runner.ProgressStorage
+namespace ParallelBatchProcessor.Runner.ProgressStorage
 {
     public class ProgressFileStorage<TId> : IItemSource<TId>
     {

@@ -1,7 +1,7 @@
-﻿using ParallelProcessing.Processors;
-using ParallelProcessing.Runner;
-using ParallelProcessing.Runner.EventHandlers;
-using ParallelProcessing.Runner.ProgressStorage;
+﻿using ParallelBatchProcessor.Processors;
+using ParallelBatchProcessor.Runner;
+using ParallelBatchProcessor.Runner.EventHandlers;
+using ParallelBatchProcessor.Runner.ProgressStorage;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing
+namespace ParallelBatchProcessor
 {
     public class ConsoleExecutor
     {

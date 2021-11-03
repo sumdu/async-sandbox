@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Runner.EventHandlers
+namespace ParallelBatchProcessor.Runner.EventHandlers
 {
     public delegate void ItemSuccessHandler<T>(T id);
     public delegate void ItemErrorHandler<T>(T id, Exception ex);

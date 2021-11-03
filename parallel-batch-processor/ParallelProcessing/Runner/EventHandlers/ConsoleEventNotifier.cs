@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Runner.EventHandlers
+namespace ParallelBatchProcessor.Runner.EventHandlers
 {
 
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Processors
+namespace ParallelBatchProcessor.Processors
 {
     public interface IProcessor<T>
     {

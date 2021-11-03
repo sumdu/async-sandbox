@@ -1,5 +1,5 @@
-﻿using ParallelProcessing.Extentions;
-using ParallelProcessing.Runner.EventHandlers;
+﻿using ParallelBatchProcessor.Extentions;
+using ParallelBatchProcessor.Runner.EventHandlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ParallelProcessing.Runner
+namespace ParallelBatchProcessor.Runner
 {
     class WorkSplitter
     {
