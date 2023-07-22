@@ -1,4 +1,7 @@
-﻿namespace ParallelBatchProcessor.Runner.EventHandlers
+﻿using System;
+using System.Threading;
+
+namespace ParallelBatchProcessor.Runner.EventHandlers
 {
     public class ConsoleEventNotifier<T> : ProcessingEvents<T>
     {

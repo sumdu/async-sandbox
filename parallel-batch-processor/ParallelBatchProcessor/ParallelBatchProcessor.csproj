@@ -1,9 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="readme.md">
+	  <Pack>true</Pack>
+	  <PackagePath>\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <PropertyGroup>
+	<PackageVersion>2.0.2</PackageVersion>
+	<title>Process items in parallel in several threads, continue where you left off</title>
+	<Authors>Andrew O.</Authors>
+	<PackageProjectUrl>https://github.com/sumdu/async-sandbox/</PackageProjectUrl>
+	<Description>Allows to split an array of values into batches and processes each batch in parallel in a Console Application</Description>
+	<PackageTags>async batch parallel processor task tasks</PackageTags>
+	<RepositoryType>git</RepositoryType>
+	<RepositoryUrl>https://github.com/sumdu/async-sandbox/</RepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageReadmeFile>readme.md</PackageReadmeFile>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<dependencies>
+	   <group targetFramework="netcoreapp3.1" />
+	</dependencies>
+  </PropertyGroup>
+	
 </Project>

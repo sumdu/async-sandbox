@@ -1,4 +1,7 @@
-﻿namespace ParallelBatchProcessor.Processors
+﻿using System;
+using System.Threading.Tasks;
+
+namespace ParallelBatchProcessor.Processors
 {
     public class SampleProcessor : IProcessor<int>
     {

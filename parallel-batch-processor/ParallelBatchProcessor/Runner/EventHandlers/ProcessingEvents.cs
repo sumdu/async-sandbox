@@ -1,4 +1,6 @@
-﻿namespace ParallelBatchProcessor.Runner.EventHandlers
+﻿using System;
+
+namespace ParallelBatchProcessor.Runner.EventHandlers
 {
     public delegate void ItemSuccessHandler<T>(T id);
     public delegate void ItemErrorHandler<T>(T id, Exception ex);

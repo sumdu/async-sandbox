@@ -1,4 +1,6 @@
-﻿namespace ParallelBatchProcessor.Runner.ProgressStorage
+﻿using System.Collections.Generic;
+
+namespace ParallelBatchProcessor.Runner.ProgressStorage
 {
     /// <summary>
     /// This class doesn't store progress. 
