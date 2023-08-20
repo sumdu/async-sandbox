@@ -18,7 +18,7 @@
 	<Authors>Andrew O.</Authors>
 	<PackageProjectUrl>https://github.com/sumdu/async-sandbox/</PackageProjectUrl>
 	<Description>Allows to split an array of values into batches and processes each batch in parallel in a Console Application</Description>
-	<PackageTags>async batch parallel processor task tasks</PackageTags>
+	<PackageTags>async batch parallel processor task tasks delegate enumerable ienumerable array list</PackageTags>
 	<RepositoryType>git</RepositoryType>
 	<RepositoryUrl>https://github.com/sumdu/async-sandbox/</RepositoryUrl>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
